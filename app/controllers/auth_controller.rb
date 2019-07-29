@@ -1,7 +1,6 @@
 class AuthController < ApplicationController
   def login
-    print 'Hello'
-    render json: { this: :thing }
+    return_success( {this: :thing} )
   end
 
   def logout

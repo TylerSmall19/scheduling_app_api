@@ -1,6 +1,7 @@
 class AuthController < ApplicationController
   def login
-    return_success( {this: :thing} )
+    print params.permit(:user_name, :password)
+    return_success( params )
   end
 
   def logout

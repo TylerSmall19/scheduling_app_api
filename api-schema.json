@@ -1,0 +1,30 @@
+{
+    "openapi": "3.0",
+    "info": {
+        "title": ""
+    },
+    "servers": [
+        {
+            "description": "Staging server",
+            "url": "placeholder.herokuapp.com/"
+        },
+        {
+            "description": "Production server",
+            "url": "prod-placeholder.herokuapp.com/"
+        }
+    ],
+    "paths": {
+        "/teams/{teamID}/matches": {
+            "get": {
+                "summary": "Get matches for a team",
+                "parameters": [
+                    {
+                        "name": "teamID",
+                        "in": "path",
+                        "description": "The ID for the team being looked for"
+                    }
+                ]
+            }
+        }
+    }
+}

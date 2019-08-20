@@ -1,7 +1,7 @@
 class AuthController < ApplicationController
   def login
-    print params.permit(:user_name, :password)
-    return_success( params )
+    print "Params\r\n"
+    return_success(auth_params)
   end
 
   def logout
@@ -10,5 +10,10 @@ class AuthController < ApplicationController
 
   def oauth
     print 'Auth'
+  end
+
+  private
+  def auth_params
+    params.require(:auth).permit(:userName, :password)
   end
 end

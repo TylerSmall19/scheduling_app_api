@@ -7,7 +7,7 @@ class AuthControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get logout" do
-    post auth_logout_url
+    post auth_logout_ur
     assert_response :success
   end
 

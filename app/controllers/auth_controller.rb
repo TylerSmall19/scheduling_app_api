@@ -1,6 +1,5 @@
 class AuthController < ApplicationController
   def login
-    print "Params\r\n"
     return_success(auth_params)
   end
 

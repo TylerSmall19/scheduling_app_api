@@ -1,5 +1,4 @@
 require 'test_helper'
-require "minitest/autorun"
 
 class AuthControllerTest < ActionDispatch::IntegrationTest
   test "should return success when valid key is given" do
@@ -21,7 +20,7 @@ class AuthControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should post logout" do
-    ENV["API_KEY"] = "local"
+    ENV["API_KEY"] = "local1"
 
     post auth_logout_url + "?api_key=" + ENV["API_KEY"]
 

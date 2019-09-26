@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'teams/', to: 'teams#new'
   post 'auth/login'
   post 'auth/logout'
   post 'auth/oauth'
